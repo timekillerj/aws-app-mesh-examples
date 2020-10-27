@@ -1,8 +1,8 @@
 export YELB_DB_ENDPOINT=$(aws cloudformation describe-stacks --stack-name yelb-fargate --query "Stacks[0].Outputs[?OutputKey=='YelbDBEndpointUrl'].OutputValue" --output text)
 export POSTGRES_PASSWORD=postgres_password
 
-sudo yum install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
-sudo service postgresql initdb
+#sudo yum install -y postgresql postgresql-server postgresql-devel postgresql-contrib postgresql-docs
+#sudo service postgresql initdb
 #!/bin/bash
 set -e
 
